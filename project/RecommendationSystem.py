@@ -1097,7 +1097,7 @@ class ContentItemWidget(QFrame):
         
         # Show similarity score as percentage
         similarity_percentage = int(similarity * 100)
-        similarity_label = QLabel(f"Match: {similarity_percentage}%")
+        similarity_label = QLabel(f"Match3: {(1 + math.exp(-similarity_percentage))}%")
         similarity_label.setStyleSheet(f"font-size: 12px; font-weight: bold; color: {border_color};")
         left_layout.addWidget(similarity_label, alignment=Qt.AlignmentFlag.AlignCenter)
         
